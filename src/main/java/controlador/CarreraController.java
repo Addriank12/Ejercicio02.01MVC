@@ -24,10 +24,10 @@ public class CarreraController{
           
     }
     public Carrera crear(int codigo, String nombre, int nAsignaturas, int yearsDuracion, int codigoA, String nombreA, String ProfesorA, int aulaA, String edificioA)
-    {   
-        
+    {           
         Asignatura asignatura = new Asignatura(codigoA, nombreA, ProfesorA, aulaA, edificioA);        
         Carrera carrera =  new Carrera(codigo, nombre, nAsignaturas, asignatura, yearsDuracion);
+        carreraServicio.crear(carrera);
         return carrera;
     }
 
